@@ -3,7 +3,7 @@
  * @Author: 郭立华
  * @Date: 2021-10-12 09:55:15
  * @LastEditors: 郭立华
- * @LastEditTime: 2021-10-12 09:55:16
+ * @LastEditTime: 2021-10-12 10:22:17
 -->
 
 <!DOCTYPE html>
@@ -12,6 +12,10 @@
     <meta charset="UTF-8">
     <title>刮刮乐</title>
     <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
       #c1{
         border: 1px solid blue;
         position: absolute;
@@ -43,6 +47,8 @@
     
     // 绘制图片到底层  canvas2
     var imgs = new Image();
+    imgs.style.width = '100%';
+    imgs.style.height = '100%';
     imgs.src = 'img/girl.jpg';
     imgs.onload = function(){
       ctx2.drawImage(this,0,0)
