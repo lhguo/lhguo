@@ -3,7 +3,7 @@
  * @Author: 郭立华
  * @Date: 2021-10-12 09:55:15
  * @LastEditors: 郭立华
- * @LastEditTime: 2021-10-12 11:06:33
+ * @LastEditTime: 2021-10-12 11:10:58
 -->
 
 <!DOCTYPE html>
@@ -42,6 +42,11 @@
 
 </body>
 <script type="text/javascript">
+  function handler(ev) {
+    ev.preventDefault();
+  }
+  // 禁止页面滚动
+  document.body.addEventListener('touchmove', handler, { passive: false });
   var c1 = document.getElementById("c1");
   var c2 = document.getElementById("c2");
 
