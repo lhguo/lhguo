@@ -3,7 +3,7 @@
  * @Author: 郭立华
  * @Date: 2021-10-12 09:55:15
  * @LastEditors: 郭立华
- * @LastEditTime: 2021-10-12 11:19:04
+ * @LastEditTime: 2021-10-12 11:22:34
 -->
 
 <!DOCTYPE html>
@@ -36,36 +36,28 @@
 
 <body>
 
-  <canvas id="c1" width="100" height="100"></canvas>
+  <canvas id="c1" width="960" height="1440"></canvas>
 
-  <canvas id="c2" width="100" height="100"></canvas>
+  <canvas id="c2" width="960" height="1440"></canvas>
 
 </body>
 <script type="text/javascript">
-var w = document.documentElement.clientWidth || document.body.clientWidth;
-var h = document.documentElement.clientHeight || document.body.clientHeight;
-
-  function handler(ev) {
-    ev.preventDefault();
-  }
-  // 禁止页面滚动
-  document.body.addEventListener('touchmove', handler, { passive: false });
-  var c1 = document.getElementById("c1");
-  var c2 = document.getElementById("c2");
-  c1.setAttribute("width", w);
-  c1.setAttribute("height", h);
-  c2.setAttribute("width", w);
-  c2.setAttribute("height", h);
+    function handler(ev) {
+      ev.preventDefault();
+    }
+    // 禁止页面滚动
+    document.body.addEventListener('touchmove', handler, { passive: false });
+    var c1 = document.getElementById("c1");
+    var c2 = document.getElementById("c2");
 
   var ctx1 = c1.getContext("2d");
   var ctx2 = c2.getContext("2d");
 
 
-
   // 绘制图片到底层  canvas2
   var imgs = new Image();
-  imgs.style.width = '100%';
-  imgs.style.height = '100%';
+  imgs.style.width = '960px';
+  imgs.style.height = '1440px';
   imgs.src = 'img/girl.jpg';
   imgs.onload = function () {
     ctx2.drawImage(this, 0, 0)
